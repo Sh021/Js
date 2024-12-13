@@ -1,4 +1,3 @@
-
 /*
 let js = 'amazing';
 console.log(40 + 8 + 23 - 10);
@@ -30,7 +29,7 @@ console.log(population);
 
 */
 
-
+/*
 let javaScriptIsFun = true;
 console.log(true);
 
@@ -41,3 +40,23 @@ console.log(typeof "Jonas");
 
 javaScriptIsFun = "YES!";
 console.log(typeof javaScriptIsFun);
+
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1991;
+
+console.log(year);
+console.log(typeof year);
+
+let isIsland = false;
+let language;
+
+console.log(typeof isIsland);
+console.log(typeof population);
+console.log(typeof country);
+console.log(typeof language);
+
+*/
+
