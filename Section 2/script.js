@@ -65,7 +65,6 @@ console.log(age2);
 */
 
 /*
-*/
 
 //Arrow Function
 const calcAge3 = birthYear => 2037 - birthYear;
@@ -83,4 +82,78 @@ const yearsUntilRetirement = (birthYear,firstName) => {
 
 console.log(yearsUntilRetirement(1997, "Jonas"));
 console.log(yearsUntilRetirement(1980, "Bob"));
+
+*/
+
+/*
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+    
+    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+*/
+
+/*
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+    
+    if (retirement >= 0) {
+        return retirement;
+    } else {
+        return -1;
+}
+
+}
+
+console.log(yearsUntilRetirement(1997, "Jonas"));
+
+console.log(yearsUntilRetirement(1970, "Mile"));
+
+*/
+
+/*
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const yearss = new Array(1991, 1984, 2008, 2020);
+console.log(friends[0]);
+console.log(yearss[1]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay";
+console.log(friends);
+
+//friends = ["Bob", "Alice"];
+
+const jonas = ["Jonas", "Schmedtmann", 2037 - 1991, "teacher", friends];
+console.log(jonas);
+
+//Exercise
+const calcAge = function(birthYear) {
+    return 2037 - birthYear;
+}
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+console.log(calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1]));
+
+*/
 
