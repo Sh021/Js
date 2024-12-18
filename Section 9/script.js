@@ -65,17 +65,159 @@ const restaurant = {
       `Here is your Delicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(...otherIngredients);
+  },
 };
+
+
+//////////////////////////////////////////////////////
+
+const rest1 = {
+  name: "Capri",
+  // numGuests: 30,
+  numGuests:0,
+};
+
+const rest2 = {
+  name: "Capri",
+  owner:"Giovanni Rossi"
+};
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// OR assignment operator
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+//nullish assignment operator (null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10; 
+
+console.log(rest1);
+console.log(rest2);
+
+//////////////////////////////////////////////////////
+
+/*
+*/
+
+/*
+
+//////////////////////////////////////////////////////
+
+//restaurant.numGuests = 0;
+
+const guest = restaurant.numGuests ? restaurant.numGuests : 10;
+
+console.log(guest);
+
+// Nullish:null and undefined (NOT 0 or "")
+const guestCorrect = restaurant.numGuests ?? 10;
+
+console.log(guestCorrect);
+
+
+//////////////////////////////////////////////////////
+
+*/
+
+/*
+    
+    //////////////////////////////////////////////
+    
+console.log("-----------OR-----------");
+
+// Use ANY data type, return ANY data type, short-circuiting
+console.log(3 || "Jonas");
+
+console.log("" || "Jonas");
+
+console.log(true || 0);
+
+console.log(undefined || null);
+
+console.log(undefined || 0 || "" || "hello" || 23 || null);
+
+restaurant.numGuests = 23;
+
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+
+console.log(guest1);
+
+const guest2 = restaurant.numGuests || 10;
+
+console.log(guest2);
+
+console.log("-----------AND----------");
+
+console.log(0 && "Jonas");
+
+console.log(7 && "Jonas");
+
+console.log("hello" && 23 && null && "jonas");
+
+// Practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("mushroom", "spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("mushroom", "spinach");
+
+//////////////////////////////////////////////
+
+ */
 
 /*
 
 /////////////////////////////////////////////////
 
+// Destructuring
+
+// SPREAD, because on RIGHT side of=
+const arr = [1, 2, ...[3, 4]];
+console.log(arr);
+
+// REST, because on LEFT side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+// Objects
+const { sat, ...weekDays } = restaurant.openingHours;
+console.log(sat, weekDays);
+
+// 2) Functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++){
+    sum += numbers[i];
+  }
+  console.log(sum);
+}
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+const x = [23, 5, 7];
+add(...x);
+
+restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
+
+restaurant.orderPizza("mushrooms");
 
 
 /////////////////////////////////////////////////
 
-*/
+ */
 
 /*
 
